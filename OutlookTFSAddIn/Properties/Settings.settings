@@ -1,7 +1,15 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OutlookTFSAddIn.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CollectionUri" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://yanivsegev128.visualstudio.com</Value>
+    </Setting>
+    <Setting Name="TeamProjectName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Scrum</Value>
+    </Setting>
+    <Setting Name="Fields" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Title,Area Path:Scrum\area 1',Iteration Path</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>
