@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="CollectionUri" Type="System.String" Scope="User">
-      <Value Profile="(Default)">https://yanivsegev128.visualstudio.com</Value>
+      <Value Profile="(Default)">http://yanivsegev128.visualstudio.com</Value>
     </Setting>
     <Setting Name="TeamProjectName" Type="System.String" Scope="User">
       <Value Profile="(Default)">Scrum</Value>

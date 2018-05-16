@@ -33,7 +33,7 @@ namespace OutlookTFSAddIn
                     mailitem = (Outlook.MailItem)obj;
 
                     // Remove special characters from the file name and make sure it is not longer than 100 characters
-                    string strFileName = Regex.Replace(mailitem.Subject, "[\\/\\\\\\:\\?\\*\\<\\>\\|]", "");
+                    string strFileName = Regex.Replace(mailitem.ConversationTopic, "[\\/\\\\\\:\\?\\*\\<\\>\\|\\\"]", "");
                     strFileName = strFileName.Substring(0, Math.Min(100, strFileName.Length)) + ".msg";
 
                     //// The full path will place the email in the user's temporary folder
@@ -42,7 +42,7 @@ namespace OutlookTFSAddIn
                     //// Save the email to the user's temp folder and convert it to a .MSG
                     mailitem.SaveAs(strTmpPath, Outlook.OlSaveAsType.olMSG);
 
-                    CreateWit(strTmpPath, mailitem.Subject, workItemType);
+                    CreateWit(strTmpPath, mailitem.ConversationTopic, workItemType);
 
                     System.IO.File.Delete(strTmpPath);
                 }

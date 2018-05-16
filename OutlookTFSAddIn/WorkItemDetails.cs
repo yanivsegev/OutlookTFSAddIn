@@ -43,6 +43,22 @@ namespace OutlookTFSAddIn
                         var x = new WorkItemDetail(field);
                         x.Dock = DockStyle.Top;
                         fieldsPanel.Controls.Add(x);
+                        x.BringToFront();
+                    }
+                }
+            }
+
+            var fieldNames = fields.Select(x => x.Split(':')[0]).ToList();
+            foreach (Field field in _newWorkItem.Fields)
+            {
+                if (!fieldNames.Contains(field.Name))
+                {
+                    if (field.IsEditable && !field.IsValid)
+                    {
+                        var x = new WorkItemDetail(field);
+                        x.Dock = DockStyle.Top;
+                        fieldsPanel.Controls.Add(x);
+                        x.BringToFront();
                     }
                 }
             }

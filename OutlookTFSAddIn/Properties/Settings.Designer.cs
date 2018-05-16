@@ -25,7 +25,7 @@ namespace OutlookTFSAddIn.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("https://yanivsegev128.visualstudio.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://yanivsegev128.visualstudio.com")]
         public string CollectionUri {
             get {
                 return ((string)(this["CollectionUri"]));
