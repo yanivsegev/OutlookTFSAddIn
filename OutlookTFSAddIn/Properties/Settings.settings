@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="CollectionUri" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://yanivsegev128.visualstudio.com</Value>
+      <Value Profile="(Default)">http://yanivsegev.visualstudio.com</Value>
     </Setting>
     <Setting Name="TeamProjectName" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Scrum</Value>
+      <Value Profile="(Default)">testApp</Value>
     </Setting>
     <Setting Name="Fields" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Title,Area Path:Scrum\area 1',Iteration Path</Value>
+      <Value Profile="(Default)">Title,Area Path:testApp,Iteration Path,Description:</Value>
     </Setting>
   </Settings>
 </SettingsFile>

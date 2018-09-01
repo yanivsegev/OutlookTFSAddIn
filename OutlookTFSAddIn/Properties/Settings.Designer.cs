@@ -25,7 +25,7 @@ namespace OutlookTFSAddIn.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://yanivsegev128.visualstudio.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://yanivsegev.visualstudio.com")]
         public string CollectionUri {
             get {
                 return ((string)(this["CollectionUri"]));
@@ -37,7 +37,7 @@ namespace OutlookTFSAddIn.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Scrum")]
+        [global::System.Configuration.DefaultSettingValueAttribute("testApp")]
         public string TeamProjectName {
             get {
                 return ((string)(this["TeamProjectName"]));
@@ -49,7 +49,7 @@ namespace OutlookTFSAddIn.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Title,Area Path:Scrum\\area 1\',Iteration Path")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Title,Area Path:testApp,Iteration Path,Description:")]
         public string Fields {
             get {
                 return ((string)(this["Fields"]));

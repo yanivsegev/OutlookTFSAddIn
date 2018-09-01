@@ -35,6 +35,14 @@ namespace OutlookTFSAddIn
                 }
                 comboBox1.Text = field.Value?.ToString() ?? string.Empty;
             }
+            else if (field.Name == "Area Path")
+            {
+                SetAutoCompleteBasedOnNodes(field, field.WorkItem.Project.AreaRootNodes);
+            }
+            else if (field.Name == "Iteration Path")
+            {
+                SetAutoCompleteBasedOnNodes(field, field.WorkItem.Project.IterationRootNodes);
+            }
             else
             {
                 comboBox1.Hide();
@@ -43,6 +51,25 @@ namespace OutlookTFSAddIn
             }
 
             IsValid();
+        }
+
+        private void SetAutoCompleteBasedOnNodes(Field field, NodeCollection nodes)
+        {
+            textBox1.Hide();
+            List<string> resultList = new List<string>();
+
+            foreach (Node area in nodes)
+            {
+                resultList.Add(area.Path);
+                resultList.AddRange(from Node item in area.ChildNodes select item.Path);
+            }
+
+
+            foreach (var x in resultList)
+            {
+                comboBox1.Items.Add(x);
+            }
+            comboBox1.Text = field.Value?.ToString() ?? string.Empty;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
